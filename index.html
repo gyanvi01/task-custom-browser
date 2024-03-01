@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kulim+Park&family=Montserrat:wght@400;500;600&family=Roboto:wght@300&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Custom Browser Tabs Implementation</title>
+  </head>
+  <body>
+    <div id="tabContainer">
+      <div class="tabs">
+        <div class="tabContainerDiv">
+          <button class="techPack toggle-button active-tab" id="tab1">
+            New Tab
+          </button>
+          <button
+            class="close-tab-button active-tab"
+            id="closetab1"
+            onclick="removeTab('tab1', event)"
+          >
+            x
+          </button>
+        </div>
+        <button class="add-tab-button" id="addTabButton">+</button>
+      </div>
+    </div>
+
+    <div class="hidden-tabs-pages-style tabPages" id="tab1Page">
+      <form id="urlForm1">
+        <input
+          type="url"
+          class="urlInput"
+          id="urlWeb1"
+          name="urlWeb"
+          placeholder="Write URL to search"
+        />
+        <input type="submit" value="Submit" name="searchicon" /><br /><br />
+      </form>
+      <iframe
+        class="iframeTabPages"
+        id="iframeTab1"
+        src=""
+        title=""
+      ></iframe>
+    </div>
+    <div class="hidden-tabs-pages-style tabPages" id="templatePage">
+      <form class="urlForm">
+        <input
+          type="url"
+          class="urlInput"
+          name="urlWeb"
+          placeholder="Write URL to search"
+        />
+
+        <input type="submit" value="Submit" name="searchicon" /><br /><br />
+      </form>
+      <iframe
+        class="iframeTabPages"
+        title=""
+      ></iframe>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
